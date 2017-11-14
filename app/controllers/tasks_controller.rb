@@ -13,7 +13,14 @@ class TasksController < ApplicationController
       render :new
     end
   end
-  
+
+  def destroy
+    @task = Task.find(params[:id])
+    @list = List.find(params[:list_id])
+    @task.destroy
+    redirect_to list_path(@list)
+  end
+
 private
   def task_params
     params.require(:task).permit(:description)
