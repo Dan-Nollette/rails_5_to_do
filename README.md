@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Add `gem 'rails-ujs'` to Gemfile
+specify `gem 'tzinfo-data', '>= 1.0.0', `
+Make sure config/application.rb line 22 is commented out.
